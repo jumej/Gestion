@@ -1,5 +1,6 @@
 ﻿using Gestion.Clases_Generales;
 using Gestion.Finanzas.Formularios;
+using Gestion.Ventas.Formulario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,16 @@ namespace Gestion.Inicio.Formularios
             moduloFinanzas.MaximizeBox = true;
             moduloFinanzas.Dock = DockStyle.Fill;
             Clase_FormDentroDePanel formInPanel = new Clase_FormDentroDePanel(moduloFinanzas, panelContenedor);
+            formInPanel.AgregarFormEnPanel();
+        }
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<Formulario_Ventas>().FirstOrDefault();
+            Formulario_Ventas moduloVentas = form ?? new Formulario_Ventas();
+            moduloVentas.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            moduloVentas.MaximizeBox = true;
+            moduloVentas.Dock = DockStyle.Fill;
+            Clase_FormDentroDePanel formInPanel = new Clase_FormDentroDePanel(moduloVentas, panelContenedor);
             formInPanel.AgregarFormEnPanel();
         }
 
