@@ -16,7 +16,7 @@ namespace Gestion.Modulo_Inventario.Formularios
         private MySqlConnection conexion;
         private MySqlCommand cmd;
         private MySqlDataReader read;
-        public static string dat = "server=localhost; database=restaurante; Uid=root; pwd=;";
+        public static string dat = "server=localhost; database=restaurante; Uid=root; pwd=1234;";
         public static string nombre = "";
         public static MySqlDataAdapter combo;
 

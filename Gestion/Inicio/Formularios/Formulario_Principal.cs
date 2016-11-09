@@ -1,5 +1,6 @@
 ﻿using Gestion.Clases_Generales;
 using Gestion.Finanzas.Formularios;
+using Gestion.Modulo_Inventario.Formularios;
 using Gestion.Ventas.Formulario;
 using System;
 using System.Collections.Generic;
@@ -52,6 +53,13 @@ namespace Gestion.Inicio.Formularios
         {
             Formulario_IniciarSesion inicio = Formulario_IniciarSesion.Obtener();
             inicio.Show();
+            this.Close();
+        }
+
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formulario_Inventario inventario = new Formulario_Inventario();
+            inventario.Show();
             this.Close();
         }
     }
