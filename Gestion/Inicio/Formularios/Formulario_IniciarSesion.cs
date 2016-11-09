@@ -18,6 +18,7 @@ namespace Gestion.Inicio.Formularios
         private Formulario_IniciarSesion()
         {
             InitializeComponent();
+            txtUsuario.Focus();
         }
 
         public static Formulario_IniciarSesion Obtener()
