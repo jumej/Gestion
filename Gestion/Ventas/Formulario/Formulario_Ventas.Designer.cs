@@ -72,6 +72,7 @@
             this.m1.Text = "Mesa1";
             this.m1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m1.UseVisualStyleBackColor = false;
+            this.m1.Click += new System.EventHandler(this.m1_Click);
             // 
             // m2
             // 
@@ -85,6 +86,7 @@
             this.m2.Text = "Mesa2";
             this.m2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m2.UseVisualStyleBackColor = true;
+            this.m2.Click += new System.EventHandler(this.m2_Click);
             // 
             // m3
             // 
@@ -98,6 +100,7 @@
             this.m3.Text = "Mesa3";
             this.m3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m3.UseVisualStyleBackColor = true;
+            this.m3.Click += new System.EventHandler(this.m3_Click);
             // 
             // m4
             // 
@@ -111,6 +114,7 @@
             this.m4.Text = "Mesa4";
             this.m4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m4.UseVisualStyleBackColor = true;
+            this.m4.Click += new System.EventHandler(this.m4_Click);
             // 
             // m5
             // 
@@ -124,6 +128,7 @@
             this.m5.Text = "Mesa5";
             this.m5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m5.UseVisualStyleBackColor = true;
+            this.m5.Click += new System.EventHandler(this.m5_Click);
             // 
             // m6
             // 
@@ -137,6 +142,7 @@
             this.m6.Text = "Mesa6";
             this.m6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m6.UseVisualStyleBackColor = true;
+            this.m6.Click += new System.EventHandler(this.m6_Click);
             // 
             // m7
             // 
@@ -150,6 +156,7 @@
             this.m7.Text = "Mesa7";
             this.m7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m7.UseVisualStyleBackColor = true;
+            this.m7.Click += new System.EventHandler(this.m7_Click);
             // 
             // m8
             // 
@@ -163,6 +170,7 @@
             this.m8.Text = "Mesa8";
             this.m8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m8.UseVisualStyleBackColor = true;
+            this.m8.Click += new System.EventHandler(this.m8_Click);
             // 
             // m9
             // 
@@ -176,6 +184,7 @@
             this.m9.Text = "Mesa9";
             this.m9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m9.UseVisualStyleBackColor = true;
+            this.m9.Click += new System.EventHandler(this.m9_Click);
             // 
             // m10
             // 
@@ -189,6 +198,7 @@
             this.m10.Text = "Mesa10";
             this.m10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m10.UseVisualStyleBackColor = true;
+            this.m10.Click += new System.EventHandler(this.m10_Click);
             // 
             // m11
             // 
@@ -202,6 +212,7 @@
             this.m11.Text = "Mesa11";
             this.m11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m11.UseVisualStyleBackColor = true;
+            this.m11.Click += new System.EventHandler(this.m11_Click);
             // 
             // m12
             // 

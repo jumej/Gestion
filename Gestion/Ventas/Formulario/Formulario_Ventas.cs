@@ -251,7 +251,98 @@ namespace Gestion.Ventas.Formulario
 
         private void m12_Click(object sender, EventArgs e)
         {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "12";
+            this.Hide();
+            f.ShowDialog();
+        }
 
+        private void m1_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "1";
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void m2_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "2";
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void m3_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "3";
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void m4_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "4";
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void m5_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "5";
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void m6_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "6";
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void m7_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "7";
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void m8_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "8";
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void m9_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "9";
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void m10_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "10";
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void m11_Click(object sender, EventArgs e)
+        {
+            Formulario_Orden f = new Formulario_Orden();
+            f.lblMesa.Text = "11";
+            this.Hide();
+            f.ShowDialog();
         }
     }
 }
