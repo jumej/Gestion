@@ -16,6 +16,8 @@ namespace Gestion.Modulo_Inventario.Formularios
         private MySqlConnection conexion;
         private MySqlCommand cmd;
         private MySqlDataReader read;
+        private DataTable dt = new DataTable();
+        private DataSet ds = new DataSet();
         public static string dat = "server=localhost; database=gestionDB; Uid=root; pwd=1234;";
         public static string nombre = "";
         public static MySqlDataAdapter combo;
@@ -38,6 +40,22 @@ namespace Gestion.Modulo_Inventario.Formularios
             conexion.ConnectionString = dat;
             conexion.Open();
             return conexion;
+        }
+
+        private DataTable getInventario()
+        {
+            try
+            {
+                combo = new MySqlDataAdapter("select i.idProducto, i.Nombre, c.tipoCategoria, m.tipoMedida from insumo i inner join categoria c on c.idCategoria = i.Categoria_idCategoria inner join medida m on m.idMedida = i.Medida_idMedida", ObtenerConexion());
+                DataTable dt = new DataTable();
+                combo.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return dt;
         }
 
         private int validarId(string id, string tabla)
@@ -331,6 +349,27 @@ namespace Gestion.Modulo_Inventario.Formularios
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string busqueda = string.Concat("[", dt.Columns[1].ColumnName, "]");
+            dt.DefaultView.Sort = busqueda;
+            DataView dv = dt.DefaultView;
+            dv.RowFilter = string.Empty;
+
+            if (txtBusqueda.Text != string.Empty)
+            {
+                dv.RowFilter = busqueda + "LIKE '%" + txtBusqueda.Text + "%'";
+                dgvInvenario.DataSource = dv;
+            }
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            dt = getInventario();
+            ds.Tables.Add(dt);
+            dgvInvenario.DataSource = dt;
         }
     }
 }
