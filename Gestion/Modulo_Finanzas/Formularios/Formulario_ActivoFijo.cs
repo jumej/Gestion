@@ -21,6 +21,7 @@ namespace Gestion.Modulo_Finanzas.Formularios
         {
 
         }
+<<<<<<< HEAD
 
         private void btnRegistrarActivo_Click(object sender, EventArgs e)
         {
@@ -37,5 +38,7 @@ namespace Gestion.Modulo_Finanzas.Formularios
 
 
         }
+=======
+>>>>>>> parent of 3fe8814... Activo Fijo
     }
 }
