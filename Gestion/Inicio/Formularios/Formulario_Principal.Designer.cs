@@ -38,10 +38,15 @@
             this.equiposYMaquinariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finanzasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             this.finanzasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recursosHumanosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 >>>>>>> origin/master
+=======
+            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> parent of 07b9c4c... Ventas
 =======
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,6 +100,7 @@
             this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -118,6 +124,8 @@
             // 
 =======
 >>>>>>> parent of 07b9c4c... Ventas
+=======
+>>>>>>> parent of 07b9c4c... Ventas
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
@@ -135,6 +143,7 @@
             // 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             // recursosHumanosToolStripMenuItem
             // 
@@ -145,6 +154,8 @@
             // 
 >>>>>>> origin/master
 =======
+=======
+>>>>>>> parent of 07b9c4c... Ventas
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -161,6 +172,9 @@
             this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             this.nuevoClienteToolStripMenuItem.DoubleClick += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
+<<<<<<< HEAD
+>>>>>>> parent of 07b9c4c... Ventas
+=======
 >>>>>>> parent of 07b9c4c... Ventas
             // Formulario_Principal
             // 
