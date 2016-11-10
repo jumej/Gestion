@@ -58,6 +58,8 @@ namespace Gestion.Inicio.Formularios
             }
             catch (Exception ex) { MessageBox.Show("Error en " + ex); }
             Clase_ConeccionDB.obtenerConeccion().Close();
+            txtUsuario.Text = "";
+            txtPass.Text = "";
         }
     }
 }

@@ -325,5 +325,10 @@ namespace Gestion.Modulo_Inventario.Formularios
                 insCompra(fechaIngreso, fechaVencimiento, cantidad, precio, idP);
             }
         }
+
+        private void btnBusqueda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -102,6 +102,7 @@
             this.btnBusqueda.TabIndex = 1;
             this.btnBusqueda.Text = "Buscar";
             this.btnBusqueda.UseVisualStyleBackColor = true;
+            this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
             // 
             // txtBusqueda
             // 
@@ -325,13 +326,13 @@
             this.lblInsumo.TabIndex = 0;
             this.lblInsumo.Text = "Seleccione Insumo: ";
             // 
-            // Form1
+            // Formulario_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 418);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.Name = "Formulario_Inventario";
             this.Text = "Inventario";
             this.Load += new System.EventHandler(this.Formulario_Inventario_Load);
             this.tabControl1.ResumeLayout(false);

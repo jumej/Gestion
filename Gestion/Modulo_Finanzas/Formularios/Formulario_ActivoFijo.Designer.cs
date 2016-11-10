@@ -167,6 +167,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Formulario_ActivoFijo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario_ActivoFijo";
             this.Load += new System.EventHandler(this.Formulario_ActivoFijo_Load);
             this.ResumeLayout(false);

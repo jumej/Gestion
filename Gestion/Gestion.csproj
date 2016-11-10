@@ -61,6 +61,24 @@
     <Compile Include="Inicio\Formularios\Formulario_Principal.Designer.cs">
       <DependentUpon>Formulario_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulo_Finanzas\Formularios\Formulario_ActivoFijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_Finanzas\Formularios\Formulario_ActivoFijo.Designer.cs">
+      <DependentUpon>Formulario_ActivoFijo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo_Finanzas\Formularios\Formulario_Balance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_Finanzas\Formularios\Formulario_Balance.Designer.cs">
+      <DependentUpon>Formulario_Balance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo_Finanzas\Formularios\Formulario_Diario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_Finanzas\Formularios\Formulario_Diario.Designer.cs">
+      <DependentUpon>Formulario_Diario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulo_Finanzas\Formularios\Formulario_Finanzas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +91,23 @@
     <Compile Include="Modulo_Finanzas\Formularios\Formulario_ListaVentas.Designer.cs">
       <DependentUpon>Formulario_ListaVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulo_Finanzas\Formularios\Formulario_Mayor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_Finanzas\Formularios\Formulario_Mayor.Designer.cs">
+      <DependentUpon>Formulario_Mayor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulo_Finanzas\Formularios\Formulario_Tablero.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulo_Finanzas\Formularios\Formulario_Tablero.Designer.cs">
       <DependentUpon>Formulario_Tablero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo_Finanzas\Formularios\Formulario_Transaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_Finanzas\Formularios\Formulario_Transaccion.Designer.cs">
+      <DependentUpon>Formulario_Transaccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo_Inventario\Formularios\Formulario_Emergente.cs">
       <SubType>Form</SubType>
@@ -105,14 +135,32 @@
     <EmbeddedResource Include="Inicio\Formularios\Formulario_Principal.resx">
       <DependentUpon>Formulario_Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_Finanzas\Formularios\Formulario_ActivoFijo.resx">
+      <DependentUpon>Formulario_ActivoFijo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_Finanzas\Formularios\Formulario_Balance.resx">
+      <DependentUpon>Formulario_Balance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_Finanzas\Formularios\Formulario_Diario.resx">
+      <DependentUpon>Formulario_Diario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulo_Finanzas\Formularios\Formulario_Finanzas.resx">
       <DependentUpon>Formulario_Finanzas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo_Finanzas\Formularios\Formulario_ListaVentas.resx">
       <DependentUpon>Formulario_ListaVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_Finanzas\Formularios\Formulario_Mayor.resx">
+      <DependentUpon>Formulario_Mayor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulo_Finanzas\Formularios\Formulario_Tablero.resx">
       <DependentUpon>Formulario_Tablero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_Finanzas\Formularios\Formulario_Transaccion.resx">
+      <DependentUpon>Formulario_Transaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_Inventario\Formularios\Formulario_Inventario.resx">
+      <DependentUpon>Formulario_Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

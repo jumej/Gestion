@@ -20,24 +20,46 @@ namespace Gestion.Finanzas.Formularios
         }
 
 
-        private void tableroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void activoFijoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<Formulario_Tablero>().FirstOrDefault();
-            Formulario_Tablero moduloFinanzas = form ?? new Formulario_Tablero();
-            moduloFinanzas.FormBorderStyle = FormBorderStyle.None;
-            moduloFinanzas.MaximizeBox = true;
-            moduloFinanzas.Dock = DockStyle.Fill;
+            var form = Application.OpenForms.OfType<Formulario_ActivoFijo>().FirstOrDefault();
+            Formulario_ActivoFijo moduloFinanzas = form ?? new Formulario_ActivoFijo();
+            moduloFinanzas.StartPosition = FormStartPosition.CenterParent;
+            //moduloFinanzas.FormBorderStyle = FormBorderStyle.None;
+            //moduloFinanzas.MaximizeBox = true;
+            //moduloFinanzas.Dock = DockStyle.Fill;
             Clase_FormDentroDePanel formInPanel = new Clase_FormDentroDePanel(moduloFinanzas, panelContenedor);
             formInPanel.AgregarFormEnPanel();
         }
 
-        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void balanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<Formulario_ListaVentas>().FirstOrDefault();
-            Formulario_ListaVentas moduloFinanzas = form ?? new Formulario_ListaVentas();
-            moduloFinanzas.FormBorderStyle = FormBorderStyle.None;
-            moduloFinanzas.MaximizeBox = true;
-            moduloFinanzas.Dock = DockStyle.Fill;
+            var form = Application.OpenForms.OfType<Formulario_Balance>().FirstOrDefault();
+            Formulario_Balance moduloFinanzas = form ?? new Formulario_Balance();
+            Clase_FormDentroDePanel formInPanel = new Clase_FormDentroDePanel(moduloFinanzas, panelContenedor);
+            formInPanel.AgregarFormEnPanel();
+        }
+
+        private void diarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<Formulario_Diario>().FirstOrDefault();
+            Formulario_Diario moduloFinanzas = form ?? new Formulario_Diario();
+            Clase_FormDentroDePanel formInPanel = new Clase_FormDentroDePanel(moduloFinanzas, panelContenedor);
+            formInPanel.AgregarFormEnPanel();
+        }
+
+        private void mayorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<Formulario_Mayor>().FirstOrDefault();
+            Formulario_Mayor moduloFinanzas = form ?? new Formulario_Mayor();
+            Clase_FormDentroDePanel formInPanel = new Clase_FormDentroDePanel(moduloFinanzas, panelContenedor);
+            formInPanel.AgregarFormEnPanel();
+        }
+
+        private void transaccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<Formulario_Transaccion>().FirstOrDefault();
+            Formulario_Transaccion moduloFinanzas = form ?? new Formulario_Transaccion();
             Clase_FormDentroDePanel formInPanel = new Clase_FormDentroDePanel(moduloFinanzas, panelContenedor);
             formInPanel.AgregarFormEnPanel();
         }
