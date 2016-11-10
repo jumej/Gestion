@@ -31,7 +31,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvInvenario = new System.Windows.Forms.DataGridView();
-            this.btnBusqueda = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnAgregarMedida = new System.Windows.Forms.Button();
@@ -76,7 +75,6 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dgvInvenario);
-            this.tabPage1.Controls.Add(this.btnBusqueda);
             this.tabPage1.Controls.Add(this.txtBusqueda);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -93,15 +91,6 @@
             this.dgvInvenario.Name = "dgvInvenario";
             this.dgvInvenario.Size = new System.Drawing.Size(492, 204);
             this.dgvInvenario.TabIndex = 3;
-            // 
-            // btnBusqueda
-            // 
-            this.btnBusqueda.Location = new System.Drawing.Point(542, 18);
-            this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(75, 23);
-            this.btnBusqueda.TabIndex = 1;
-            this.btnBusqueda.Text = "Buscar";
-            this.btnBusqueda.UseVisualStyleBackColor = true;
             // 
             // txtBusqueda
             // 
@@ -325,13 +314,13 @@
             this.lblInsumo.TabIndex = 0;
             this.lblInsumo.Text = "Seleccione Insumo: ";
             // 
-            // Form1
+            // Formulario_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 418);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.Name = "Formulario_Inventario";
             this.Text = "Inventario";
             this.Load += new System.EventHandler(this.Formulario_Inventario_Load);
             this.tabControl1.ResumeLayout(false);
@@ -353,7 +342,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox txtBusqueda;
-        private System.Windows.Forms.Button btnBusqueda;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtNombre;

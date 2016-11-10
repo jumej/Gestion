@@ -43,6 +43,16 @@ namespace Gestion.Inicio.Formularios
             formInPanel.AgregarFormEnPanel();
         }
 
+        private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<Formulario_Clientes>().FirstOrDefault();
+            Formulario_Clientes moduloClientes = form ?? new Formulario_Clientes();
+            moduloClientes.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            moduloClientes.MaximizeBox = true;
+            moduloClientes.Dock = DockStyle.Fill;
+            Clase_FormDentroDePanel formInPanel = new Clase_FormDentroDePanel(moduloClientes, panelContenedor);
+            formInPanel.AgregarFormEnPanel();
+        }
         private void Formulario_Principal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Formulario_IniciarSesion inicio = Formulario_IniciarSesion.Obtener();

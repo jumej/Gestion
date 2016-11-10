@@ -18,6 +18,7 @@ namespace Gestion.Inicio.Formularios
         private Formulario_IniciarSesion()
         {
             InitializeComponent();
+            txtUsuario.Focus();
         }
 
         public static Formulario_IniciarSesion Obtener()
@@ -58,6 +59,8 @@ namespace Gestion.Inicio.Formularios
             }
             catch (Exception ex) { MessageBox.Show("Error en " + ex); }
             Clase_ConeccionDB.obtenerConeccion().Close();
+            txtUsuario.Text = "";
+            txtPass.Text = "";
         }
     }
 }

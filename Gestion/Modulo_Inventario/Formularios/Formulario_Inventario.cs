@@ -327,5 +327,10 @@ namespace Gestion.Modulo_Inventario.Formularios
                 inventario();
             }
         }
+
+        private void btnBusqueda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
