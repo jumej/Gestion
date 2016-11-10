@@ -20,7 +20,7 @@ namespace Gestion.Modulo_Produccion.Formularios
         private MySqlCommand cmd;
         private MySqlDataReader consultar;
         public static String dat = "server = localhost; database = gestiondb; Uid = root; pwd = 1234;";
-        public static String nombre = "";
+        
 
         public Formulario_Produccion()
         {
@@ -82,8 +82,6 @@ namespace Gestion.Modulo_Produccion.Formularios
 
             while (consultar.Read())
             {
-
-
                 dataGridView1.Rows.Add(1);
                 String nombre = consultar.GetInt32(0).ToString();
                 dataGridView1[0, dataGridView1.RowCount - 1].Value = nombre;
@@ -120,30 +118,10 @@ namespace Gestion.Modulo_Produccion.Formularios
 
         //}
 
-        //inserta un ingrediente a la base de datos
+        
         private void button4_Click(object sender, EventArgs e)
         {
-            if ((textBox6.Text.Trim() != "") & (textBox7.Text.Trim() != "") & (richTextBox1.Text != ""))
-            {
-                String nombre = textBox6.Text;
-                String descripcion = richTextBox1.Text;
-                Double cantidad = Convert.ToDouble(textBox7.Text);
-
-                MySqlCommand cmd = new MySqlCommand(String.Format("INSERT into Ingredientes (nombre, cantidad, descripcion) values '{0}','{1}','{2}')", nombre, descripcion, cantidad), ObtenerConexion());
-
-                conexion.Close();
-
-                textBox6.Clear();
-                textBox7.Clear();
-                richTextBox1.Clear();
-
-
-                actualizarIngredientes();
-                MessageBox.Show("Ingrediente Creado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
-            }
+            
         }
 
         //Clic al boton del dgv para Modificar Recetas
@@ -175,17 +153,10 @@ namespace Gestion.Modulo_Produccion.Formularios
         }
 
 
-        //Aceptar las modificaciones a las recetas
+        
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Receta Modificada Exitosamente");
-
-            txtNombre.Text = "";
-            txtPrecio.Text = "";
-            txtTPrep.Text = "";
-            txtAutor.Text = "";
-
-            tabControl1.SelectedTab = tabVerRec;
+            
         }
 
         //boton Cancelar 
@@ -200,12 +171,71 @@ namespace Gestion.Modulo_Produccion.Formularios
         }
 
 
-        //crear recetas
+        
         private void button6_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show("Receta Creada Exitosamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            actualizarRecetas();
+            
+        }
+        //crear recetas
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            if ((textBox1.Text.Trim() != "") & (textBox2.Text.Trim() != "") & (textBox3.Text.Trim() != "") & (textBox4.Text.Trim() != ""))
+            {
+                String nombre = textBox1.Text;
+                Double precio = Convert.ToDouble(textBox2.Text);
+                String autor = textBox3.Text;
+                String tPrep = textBox4.Text;
+
+                MySqlCommand cmd = new MySqlCommand(String.Format("INSERT into Recetas (nombre, precio, tiempo_preparacion,autor) values '{0}','{1}','{2}','{3}')",nombre, precio, tPrep,autor),ObtenerConexion());
+
+                conexion.Close();
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox4.Clear();
+
+                actualizarRecetas();
+                MessageBox.Show("Receta Creada Exitosamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+        }
+
+        //inserta un ingrediente a la base de datos
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            if ((textBox6.Text.Trim() != "") & (textBox7.Text.Trim() != "") & (richTextBox1.Text != ""))
+            {
+                String nombre = textBox6.Text;
+                String descripcion = richTextBox1.Text;
+                Double cantidad = Convert.ToDouble(textBox7.Text);
+
+                MySqlCommand cmd = new MySqlCommand(String.Format("INSERT into Ingredientes (nombre, cantidad, descripcion) values '{0}','{1}','{2}')", nombre, descripcion, cantidad), ObtenerConexion());
+
+                conexion.Close();
+
+                textBox6.Clear();
+                textBox7.Clear();
+                richTextBox1.Clear();
+
+
+                actualizarIngredientes();
+                MessageBox.Show("Ingrediente Creado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        //Aceptar las modificaciones a las recetas
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Receta Modificada Exitosamente");
+
+            txtNombre.Text = "";
+            txtPrecio.Text = "";
+            txtTPrep.Text = "";
+            txtAutor.Text = "";
+
+            tabControl1.SelectedTab = tabVerRec;
         }
     }
 }
