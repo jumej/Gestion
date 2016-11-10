@@ -80,8 +80,13 @@ namespace Gestion.Inicio.Formularios
 
         private void produccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Formulario_Produccion produccion = new Formulario_Produccion();
-            produccion.Show();
+            var form = Application.OpenForms.OfType<Formulario_Produccion>().FirstOrDefault();
+            Formulario_Produccion moduloProduccion = form ?? new Formulario_Produccion();
+            moduloProduccion.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            moduloProduccion.MaximizeBox = true;
+            moduloProduccion.Dock = DockStyle.Fill;
+            Clase_FormDentroDePanel formInPanel = new Clase_FormDentroDePanel(moduloProduccion,panelContenedor);
+            formInPanel.AgregarFormEnPanel();
             
         }
     }
