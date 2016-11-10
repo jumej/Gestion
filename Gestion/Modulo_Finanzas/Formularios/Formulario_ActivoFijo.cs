@@ -21,5 +21,10 @@ namespace Gestion.Modulo_Finanzas.Formularios
         {
 
         }
+
+        private void btnRegistrarActivo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
