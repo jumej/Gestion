@@ -30,14 +30,14 @@
         {
             this.btnRegistrarActivo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtDepreciacion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTiempoDepreciacion = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -64,12 +64,12 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "% DE DEPRESIACION";
             // 
-            // textBox6
+            // txtDepreciacion
             // 
-            this.textBox6.Location = new System.Drawing.Point(582, 172);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(78, 20);
-            this.textBox6.TabIndex = 23;
+            this.txtDepreciacion.Location = new System.Drawing.Point(582, 172);
+            this.txtDepreciacion.Name = "txtDepreciacion";
+            this.txtDepreciacion.Size = new System.Drawing.Size(78, 20);
+            this.txtDepreciacion.TabIndex = 23;
             // 
             // label5
             // 
@@ -123,12 +123,12 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "FECHA DE COMPRA";
             // 
-            // textBox4
+            // txtTiempoDepreciacion
             // 
-            this.textBox4.Location = new System.Drawing.Point(244, 112);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(157, 20);
-            this.textBox4.TabIndex = 16;
+            this.txtTiempoDepreciacion.Location = new System.Drawing.Point(244, 112);
+            this.txtTiempoDepreciacion.Name = "txtTiempoDepreciacion";
+            this.txtTiempoDepreciacion.Size = new System.Drawing.Size(157, 20);
+            this.txtTiempoDepreciacion.TabIndex = 16;
             // 
             // textBox3
             // 
@@ -164,7 +164,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "INMUEBLES",
+            "EDIFICIOS",
             "MOBILIARIO Y EQUIPO",
             "VEHICULOS",
             "EQUIPO DE COMPUTO"});
@@ -172,6 +172,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(192, 21);
             this.comboBox1.TabIndex = 27;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Formulario_ActivoFijo
             // 
@@ -182,14 +183,14 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnRegistrarActivo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtDepreciacion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtTiempoDepreciacion);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -206,14 +207,14 @@
 
         private System.Windows.Forms.Button btnRegistrarActivo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtDepreciacion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTiempoDepreciacion;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
