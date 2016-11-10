@@ -30,7 +30,9 @@ namespace Gestion.Modulo_Inventario.Formularios
         private void Formulario_Inventario_Load(object sender, EventArgs e)
         {
             actComboBox();
-            inventario();
+            dt = getInventario();
+            ds.Tables.Add(dt);
+            dgvInvenario.DataSource = dt;
             cargarInsumos();
         }
 
@@ -81,12 +83,12 @@ namespace Gestion.Modulo_Inventario.Formularios
             return cont + 1;
         }
 
-        private bool yaExisteInsumo(string nombre)
+        private bool yaExiste(string iden ,string nombre, string tabla)
         {
             try
             {
                 string existente = "";
-                cmd = new MySqlCommand("select Nombre from insumo", ObtenerConexion());
+                cmd = new MySqlCommand("select "+iden+" from "+tabla+" where "+iden+"= '"+nombre+"'", ObtenerConexion());
                 read = cmd.ExecuteReader();
 
                 if (read.Read() == true)
@@ -238,16 +240,27 @@ namespace Gestion.Modulo_Inventario.Formularios
             {
                 try
                 {
-                    cmd = new MySqlCommand("insert into insumo values (" + id + ",'" + nombre + "','" + descripcion + "'," + idCategoria + "," + idMedida + ");", ObtenerConexion());
-                    cmd.ExecuteNonQuery();
-                    cargarInsumos();
-                    MessageBox.Show("Insumo creado");
-                    inventario();
+                    if (!yaExiste("Nombre",nombre,"insumo"))
+                    {
+
+                        cmd = new MySqlCommand("insert into insumo values (" + id + ",'" + nombre + "','" + descripcion + "'," + idCategoria + "," + idMedida + ");", ObtenerConexion());
+                        cmd.ExecuteNonQuery();
+                        cargarInsumos();
+                        MessageBox.Show("Insumo creado");
+                        inventario();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("El insumo ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+                txtNombre.Clear();
+                txtDescripcion.Clear();
             }
         }
 
@@ -258,10 +271,17 @@ namespace Gestion.Modulo_Inventario.Formularios
 
             try
             {
-                cmd = new MySqlCommand("insert into categoria values (" + id + ",'" + nombre + "')", ObtenerConexion());
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Categoría creada");
-                actComboBox();
+                if (!yaExiste("tipoCategoria", nombre, "categoria"))
+                {
+                    cmd = new MySqlCommand("insert into categoria values (" + id + ",'" + nombre + "')", ObtenerConexion());
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Categoría creada");
+                    actComboBox();
+                }
+                else
+                {
+                    MessageBox.Show("La categoria ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -277,10 +297,17 @@ namespace Gestion.Modulo_Inventario.Formularios
 
             try
             {
-                cmd = new MySqlCommand("insert into medida values (" + id + ",'" + nombre + "')", ObtenerConexion());
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Medida creada");
-                actComboBox();
+                if (!yaExiste("tipoMedida", nombre, "medida"))
+                {
+                    cmd = new MySqlCommand("insert into medida values (" + id + ",'" + nombre + "')", ObtenerConexion());
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Medida creada");
+                    actComboBox();
+                }
+                else
+                {
+                    MessageBox.Show("La medida ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -339,10 +366,12 @@ namespace Gestion.Modulo_Inventario.Formularios
 
                 string fechaIngreso = Convert.ToString(thisDay.Year + "-" + thisDay.Month + "-" + thisDay.Day);
 
-                //MessageBox.Show(idP + ";" + fechaVencimiento + ";" + fechaIngreso);
 
                 insCompra(fechaIngreso, fechaVencimiento, cantidad, precio, idP);
                 inventario();
+
+                txtPrecioInsumo.Clear();
+                txtCantInsumo.Clear();
             }
         }
 
