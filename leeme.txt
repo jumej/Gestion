@@ -1,0 +1,7 @@
+1. Agregar Cada Módulo en Carpetas dentro del proyecto
+2. La tablas que corresponden a cada modulo deben agregarse en en archivo workbench que viene agregado en este repositorio (gestion.mwb).
+3. Deben agregar su pantalla principal (de cada grupo)  a la pantalla principal del ERP. Para esto pueden hacer uso de 
+	la clase Clase_FormDentroDePanel.cs que esta en la carpeta "Clases Generales".
+
+
+Para el Login deben crear su usuario y contraseña en la tabla usuarios esta va incluida en el archivo [gestion.mwb] archivo de workbench
