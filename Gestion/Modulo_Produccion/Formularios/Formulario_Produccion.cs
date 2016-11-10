@@ -207,6 +207,13 @@ namespace Gestion.Modulo_Produccion.Formularios
             MessageBox.Show("Receta Creada Exitosamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             actualizarRecetas();
         }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Receta Creada Exitosamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            actualizarRecetas();
+
+        }
     }
 }
 
