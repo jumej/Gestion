@@ -121,6 +121,30 @@
     <Compile Include="Modulo_Inventario\Formularios\Formulario_Inventario.Designer.cs">
       <DependentUpon>Formulario_Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulo_RRHH\Formularios\Formulario_Contratar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_RRHH\Formularios\Formulario_Contratar.Designer.cs">
+      <DependentUpon>Formulario_Contratar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo_RRHH\Formularios\Formulario_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_RRHH\Formularios\Formulario_Empleados.Designer.cs">
+      <DependentUpon>Formulario_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo_RRHH\Formularios\Formulario_Principal_RRHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_RRHH\Formularios\Formulario_Principal_RRHH.Designer.cs">
+      <DependentUpon>Formulario_Principal_RRHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo_RRHH\Formularios\Formulario_Reclutar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_RRHH\Formularios\Formulario_Reclutar.Designer.cs">
+      <DependentUpon>Formulario_Reclutar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ventas\Formulario\Formulario_Clientes.cs">
@@ -167,6 +191,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo_Inventario\Formularios\Formulario_Inventario.resx">
       <DependentUpon>Formulario_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_RRHH\Formularios\Formulario_Contratar.resx">
+      <DependentUpon>Formulario_Contratar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_RRHH\Formularios\Formulario_Empleados.resx">
+      <DependentUpon>Formulario_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_RRHH\Formularios\Formulario_Principal_RRHH.resx">
+      <DependentUpon>Formulario_Principal_RRHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_RRHH\Formularios\Formulario_Reclutar.resx">
+      <DependentUpon>Formulario_Reclutar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
