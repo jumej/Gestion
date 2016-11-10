@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnRegistrarActivo = new System.Windows.Forms.Button();
             this.txtDepreciacion = new System.Windows.Forms.TextBox();
 =======
+=======
+>>>>>>> parent of 3fe8814... Activo Fijo
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -46,9 +49,13 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+=======
+            this.textBox1 = new System.Windows.Forms.TextBox();
+>>>>>>> parent of 3fe8814... Activo Fijo
 =======
             this.textBox1 = new System.Windows.Forms.TextBox();
 >>>>>>> parent of 3fe8814... Activo Fijo
@@ -56,6 +63,7 @@
             // 
             // button1
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.btnRegistrarActivo.Location = new System.Drawing.Point(438, 298);
             this.btnRegistrarActivo.Name = "btnRegistrarActivo";
@@ -65,12 +73,15 @@
             this.btnRegistrarActivo.UseVisualStyleBackColor = true;
             this.btnRegistrarActivo.Click += new System.EventHandler(this.btnRegistrarActivo_Click);
 =======
+=======
+>>>>>>> parent of 3fe8814... Activo Fijo
             this.button1.Location = new System.Drawing.Point(448, 216);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 96);
             this.button1.TabIndex = 25;
             this.button1.Text = "REGISTRAR ACTIVO";
             this.button1.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
 >>>>>>> parent of 3fe8814... Activo Fijo
             // 
             // txtDepreciacion
@@ -83,6 +94,11 @@
             this.txtDepreciacion.TabIndex = 23;
             this.txtDepreciacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 =======
+=======
+            // 
+            // label6
+            // 
+>>>>>>> parent of 3fe8814... Activo Fijo
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(54, 299);
             this.label6.Name = "label6";
@@ -118,7 +134,11 @@
             // 
             this.label4.AutoSize = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label4.Location = new System.Drawing.Point(442, 61);
+=======
+            this.label4.Location = new System.Drawing.Point(54, 146);
+>>>>>>> parent of 3fe8814... Activo Fijo
 =======
             this.label4.Location = new System.Drawing.Point(54, 146);
 >>>>>>> parent of 3fe8814... Activo Fijo
@@ -131,7 +151,11 @@
             // 
             this.label3.AutoSize = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(375, 194);
+=======
+            this.label3.Location = new System.Drawing.Point(54, 95);
+>>>>>>> parent of 3fe8814... Activo Fijo
 =======
             this.label3.Location = new System.Drawing.Point(54, 95);
 >>>>>>> parent of 3fe8814... Activo Fijo
@@ -153,7 +177,11 @@
             // 
             this.label1.AutoSize = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(44, 191);
+=======
+            this.label1.Location = new System.Drawing.Point(54, 194);
+>>>>>>> parent of 3fe8814... Activo Fijo
 =======
             this.label1.Location = new System.Drawing.Point(54, 194);
 >>>>>>> parent of 3fe8814... Activo Fijo
@@ -174,8 +202,11 @@
             // 
             // textBox3
             // 
+<<<<<<< HEAD
             this.textBox3.Location = new System.Drawing.Point(434, 191);
 =======
+=======
+>>>>>>> parent of 3fe8814... Activo Fijo
             this.textBox4.Location = new System.Drawing.Point(244, 139);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(157, 20);
@@ -184,6 +215,9 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(244, 88);
+<<<<<<< HEAD
+>>>>>>> parent of 3fe8814... Activo Fijo
+=======
 >>>>>>> parent of 3fe8814... Activo Fijo
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(157, 20);
@@ -192,7 +226,11 @@
             // textBox2
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.textBox2.Location = new System.Drawing.Point(44, 145);
+=======
+            this.textBox2.Location = new System.Drawing.Point(244, 30);
+>>>>>>> parent of 3fe8814... Activo Fijo
 =======
             this.textBox2.Location = new System.Drawing.Point(244, 30);
 >>>>>>> parent of 3fe8814... Activo Fijo
@@ -200,6 +238,7 @@
             this.textBox2.Size = new System.Drawing.Size(157, 20);
             this.textBox2.TabIndex = 14;
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             // label7
             // 
@@ -232,18 +271,24 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(109, 20);
             this.dateTimePicker1.TabIndex = 28;
 =======
+=======
+>>>>>>> parent of 3fe8814... Activo Fijo
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(244, 187);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(157, 20);
             this.textBox1.TabIndex = 13;
+<<<<<<< HEAD
+>>>>>>> parent of 3fe8814... Activo Fijo
+=======
 >>>>>>> parent of 3fe8814... Activo Fijo
             // 
             // Formulario_ActivoFijo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(650, 375);
             this.Controls.Add(this.dateTimePicker1);
@@ -252,6 +297,8 @@
             this.Controls.Add(this.btnRegistrarActivo);
             this.Controls.Add(this.txtDepreciacion);
 =======
+=======
+>>>>>>> parent of 3fe8814... Activo Fijo
             this.ClientSize = new System.Drawing.Size(672, 377);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -278,9 +325,12 @@
         #endregion
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.Button btnRegistrarActivo;
         private System.Windows.Forms.TextBox txtDepreciacion;
 =======
+=======
+>>>>>>> parent of 3fe8814... Activo Fijo
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox6;
@@ -295,9 +345,13 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+=======
+        private System.Windows.Forms.TextBox textBox1;
+>>>>>>> parent of 3fe8814... Activo Fijo
 =======
         private System.Windows.Forms.TextBox textBox1;
 >>>>>>> parent of 3fe8814... Activo Fijo
