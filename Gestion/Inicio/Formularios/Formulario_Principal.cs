@@ -2,6 +2,7 @@
 using Gestion.Finanzas.Formularios;
 using Gestion.Modulo_Inventario.Formularios;
 using Gestion.Ventas.Formulario;
+using Gestion.Modulo_Produccion.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,6 +76,13 @@ namespace Gestion.Inicio.Formularios
             moduloInventario.Dock = DockStyle.Fill;
             Clase_FormDentroDePanel formInPane = new Clase_FormDentroDePanel(moduloInventario, panelContenedor);
             formInPane.AgregarFormEnPanel();
+        }
+
+        private void produccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formulario_Produccion produccion = new Formulario_Produccion();
+            produccion.Show();
+            
         }
     }
 }
