@@ -36,7 +36,6 @@
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.equiposYMaquinariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finanzasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recursosHumanosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -57,7 +56,6 @@
             this.ventasToolStripMenuItem,
             this.clienteToolStripMenuItem,
             this.inventarioToolStripMenuItem,
-            this.equiposYMaquinariaToolStripMenuItem,
             this.finanzasToolStripMenuItem,
             this.recursosHumanosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -84,7 +82,7 @@
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ventasToolStripMenuItem.Text = "Ventas";
             this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
@@ -110,12 +108,6 @@
             this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
-            // 
-            // equiposYMaquinariaToolStripMenuItem
-            // 
-            this.equiposYMaquinariaToolStripMenuItem.Name = "equiposYMaquinariaToolStripMenuItem";
-            this.equiposYMaquinariaToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
-            this.equiposYMaquinariaToolStripMenuItem.Text = "Equipos y Maquinaria";
             // 
             // finanzasToolStripMenuItem
             // 
@@ -156,7 +148,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem equiposYMaquinariaToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem finanzasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
