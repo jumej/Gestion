@@ -16,7 +16,7 @@ namespace Gestion.Modulo_Inventario.Formularios
         private MySqlConnection conexion;
         private MySqlCommand cmd;
         private MySqlDataReader read;
-        public static string dat = "server=localhost; database=restaurante; Uid=root; pwd=1234;";
+        public static string dat = "server=localhost; database=gestionDB; Uid=root; pwd=1234;";
         public static string nombre = "";
         public static MySqlDataAdapter combo;
 
@@ -99,22 +99,22 @@ namespace Gestion.Modulo_Inventario.Formularios
         {
             try
             {
-                cmd = new MySqlCommand("select idCategoria,Nombre from categoria", ObtenerConexion());
+                cmd = new MySqlCommand("select idCategoria,tipoCategoria from categoria", ObtenerConexion());
                 MySqlDataAdapter da1 = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da1.Fill(dt);
 
                 cmbCategoria.ValueMember = "idCategoria";
-                cmbCategoria.DisplayMember = "Nombre";
+                cmbCategoria.DisplayMember = "tipoCategoria";
                 cmbCategoria.DataSource = dt;
 
-                MySqlCommand cmd1 = new MySqlCommand("select idMedida,Nombre from medida", ObtenerConexion());
+                MySqlCommand cmd1 = new MySqlCommand("select idMedida,tipoMedida from medida", ObtenerConexion());
                 MySqlDataAdapter da2 = new MySqlDataAdapter(cmd1);
                 DataTable dt1 = new DataTable();
                 da2.Fill(dt1);
 
                 cmbMedida.ValueMember = "idMedida";
-                cmbMedida.DisplayMember = "Nombre";
+                cmbMedida.DisplayMember = "tipoMedida";
                 cmbMedida.DataSource = dt1;
             }
             catch (Exception ex)
@@ -128,7 +128,7 @@ namespace Gestion.Modulo_Inventario.Formularios
             try
             {
                 DataTable dt = new DataTable();
-                MySqlDataAdapter myda = new MySqlDataAdapter("select i.idProducto, i.Nombre, c.Nombre, m.Nombre from insumo i inner join categoria c on c.idCategoria = i.idCategoria inner join medida m on m.idMedida = i.idMedida", ObtenerConexion());
+                MySqlDataAdapter myda = new MySqlDataAdapter("select i.idProducto, i.Nombre, c.tipoCategoria, m.tipoMedida from insumo i inner join categoria c on c.idCategoria = i.Categoria_idCategoria inner join medida m on m.idMedida = i.Medida_idMedida", ObtenerConexion());
                 myda.Fill(dt);
                 dgvInvenario.DataSource = dt;
             }
@@ -224,6 +224,7 @@ namespace Gestion.Modulo_Inventario.Formularios
                     cmd.ExecuteNonQuery();
                     cargarInsumos();
                     MessageBox.Show("Insumo creado");
+                    inventario();
                 }
                 catch (Exception ex)
                 {
@@ -323,6 +324,7 @@ namespace Gestion.Modulo_Inventario.Formularios
                 //MessageBox.Show(idP + ";" + fechaVencimiento + ";" + fechaIngreso);
 
                 insCompra(fechaIngreso, fechaVencimiento, cantidad, precio, idP);
+                inventario();
             }
         }
     }

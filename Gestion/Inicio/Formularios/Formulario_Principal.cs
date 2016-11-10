@@ -58,9 +58,13 @@ namespace Gestion.Inicio.Formularios
 
         private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Formulario_Inventario inventario = new Formulario_Inventario();
-            inventario.Show();
-            this.Close();
+            var form = Application.OpenForms.OfType<Formulario_Inventario>().FirstOrDefault();
+            Formulario_Inventario moduloInventario = form ?? new Formulario_Inventario();
+            moduloInventario.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            moduloInventario.MaximizeBox = true;
+            moduloInventario.Dock = DockStyle.Fill;
+            Clase_FormDentroDePanel formInPane = new Clase_FormDentroDePanel(moduloInventario, panelContenedor);
+            formInPane.AgregarFormEnPanel();
         }
     }
 }
