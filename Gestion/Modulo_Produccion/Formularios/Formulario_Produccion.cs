@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace Gestion.Modulo_Produccion.Formularios
 {
@@ -15,10 +16,10 @@ namespace Gestion.Modulo_Produccion.Formularios
     {
 
         //conexion a la base de datos
-        private SqlConnection conexion;
-        private SqlCommand cmd;
-        private SqlDataReader consultar;
-        public static String dat = "server = localhost; database = restaurante; Uid = root; pwd = 1234;";
+        private MySqlConnection conexion;
+        private MySqlCommand cmd;
+        private MySqlDataReader consultar;
+        public static String dat = "server = localhost; database = gestiondb; Uid = root; pwd = 1234;";
         public static String nombre = "";
 
         public Formulario_Produccion()
@@ -26,10 +27,10 @@ namespace Gestion.Modulo_Produccion.Formularios
             InitializeComponent();
         }
 
-        private SqlConnection ObtenerConexion()
+        private MySqlConnection ObtenerConexion()
         {
 
-            conexion = new SqlConnection();
+            conexion = new MySqlConnection();
             conexion.ConnectionString = dat;
             conexion.Open();
             return conexion;
@@ -128,7 +129,7 @@ namespace Gestion.Modulo_Produccion.Formularios
                 String descripcion = richTextBox1.Text;
                 Double cantidad = Convert.ToDouble(textBox7.Text);
 
-                SqlCommand cmd = new SqlCommand(String.Format("INSERT into Ingredientes (nombre, cantidad, descripcion) values '{0}','{1}','{2}')", nombre, descripcion, cantidad), ObtenerConexion());
+                MySqlCommand cmd = new MySqlCommand(String.Format("INSERT into Ingredientes (nombre, cantidad, descripcion) values '{0}','{1}','{2}')", nombre, descripcion, cantidad), ObtenerConexion());
 
                 conexion.Close();
 
