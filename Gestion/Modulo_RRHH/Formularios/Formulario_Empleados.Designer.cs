@@ -1,6 +1,6 @@
-﻿namespace Gestion.Modulo_Finanzas.Formularios
+﻿namespace Gestion.Modulo_RRHH.Formularios
 {
-    partial class Formulario_Balance
+    partial class Formulario_Empleados
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Formulario_Balance
+            // Formulario_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 281);
-            this.Name = "Formulario_Balance";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Formulario_Balance";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "Formulario_Empleados";
+            this.Text = "Empleados";
             this.ResumeLayout(false);
 
         }

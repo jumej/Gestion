@@ -16,7 +16,9 @@ namespace Gestion.Modulo_Inventario.Formularios
         private MySqlConnection conexion;
         private MySqlCommand cmd;
         private MySqlDataReader read;
-        public static string dat = "server=localhost; database=restaurante; Uid=root; pwd=1234;";
+        private DataTable dt = new DataTable();
+        private DataSet ds = new DataSet();
+        public static string dat = "server=localhost; database=gestionDB; Uid=root; pwd=1234;";
         public static string nombre = "";
         public static MySqlDataAdapter combo;
 
@@ -28,7 +30,9 @@ namespace Gestion.Modulo_Inventario.Formularios
         private void Formulario_Inventario_Load(object sender, EventArgs e)
         {
             actComboBox();
-            inventario();
+            dt = getInventario();
+            ds.Tables.Add(dt);
+            dgvInvenario.DataSource = dt;
             cargarInsumos();
         }
 
@@ -38,6 +42,22 @@ namespace Gestion.Modulo_Inventario.Formularios
             conexion.ConnectionString = dat;
             conexion.Open();
             return conexion;
+        }
+
+        private DataTable getInventario()
+        {
+            try
+            {
+                combo = new MySqlDataAdapter("select i.idProducto, i.Nombre, c.tipoCategoria, m.tipoMedida from insumo i inner join categoria c on c.idCategoria = i.Categoria_idCategoria inner join medida m on m.idMedida = i.Medida_idMedida", ObtenerConexion());
+                DataTable dt = new DataTable();
+                combo.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return dt;
         }
 
         private int validarId(string id, string tabla)
@@ -63,12 +83,12 @@ namespace Gestion.Modulo_Inventario.Formularios
             return cont + 1;
         }
 
-        private bool yaExisteInsumo(string nombre)
+        private bool yaExiste(string iden ,string nombre, string tabla)
         {
             try
             {
                 string existente = "";
-                cmd = new MySqlCommand("select Nombre from insumo", ObtenerConexion());
+                cmd = new MySqlCommand("select "+iden+" from "+tabla+" where "+iden+"= '"+nombre+"'", ObtenerConexion());
                 read = cmd.ExecuteReader();
 
                 if (read.Read() == true)
@@ -99,22 +119,22 @@ namespace Gestion.Modulo_Inventario.Formularios
         {
             try
             {
-                cmd = new MySqlCommand("select idCategoria,Nombre from categoria", ObtenerConexion());
+                cmd = new MySqlCommand("select idCategoria,tipoCategoria from categoria", ObtenerConexion());
                 MySqlDataAdapter da1 = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da1.Fill(dt);
 
                 cmbCategoria.ValueMember = "idCategoria";
-                cmbCategoria.DisplayMember = "Nombre";
+                cmbCategoria.DisplayMember = "tipoCategoria";
                 cmbCategoria.DataSource = dt;
 
-                MySqlCommand cmd1 = new MySqlCommand("select idMedida,Nombre from medida", ObtenerConexion());
+                MySqlCommand cmd1 = new MySqlCommand("select idMedida,tipoMedida from medida", ObtenerConexion());
                 MySqlDataAdapter da2 = new MySqlDataAdapter(cmd1);
                 DataTable dt1 = new DataTable();
                 da2.Fill(dt1);
 
                 cmbMedida.ValueMember = "idMedida";
-                cmbMedida.DisplayMember = "Nombre";
+                cmbMedida.DisplayMember = "tipoMedida";
                 cmbMedida.DataSource = dt1;
             }
             catch (Exception ex)
@@ -128,7 +148,7 @@ namespace Gestion.Modulo_Inventario.Formularios
             try
             {
                 DataTable dt = new DataTable();
-                MySqlDataAdapter myda = new MySqlDataAdapter("select i.idProducto, i.Nombre, c.Nombre, m.Nombre from insumo i inner join categoria c on c.idCategoria = i.idCategoria inner join medida m on m.idMedida = i.idMedida", ObtenerConexion());
+                MySqlDataAdapter myda = new MySqlDataAdapter("select i.idProducto, i.Nombre, c.tipoCategoria, m.tipoMedida from insumo i inner join categoria c on c.idCategoria = i.Categoria_idCategoria inner join medida m on m.idMedida = i.Medida_idMedida", ObtenerConexion());
                 myda.Fill(dt);
                 dgvInvenario.DataSource = dt;
             }
@@ -220,15 +240,27 @@ namespace Gestion.Modulo_Inventario.Formularios
             {
                 try
                 {
-                    cmd = new MySqlCommand("insert into insumo values (" + id + ",'" + nombre + "','" + descripcion + "'," + idCategoria + "," + idMedida + ");", ObtenerConexion());
-                    cmd.ExecuteNonQuery();
-                    cargarInsumos();
-                    MessageBox.Show("Insumo creado");
+                    if (!yaExiste("Nombre",nombre,"insumo"))
+                    {
+
+                        cmd = new MySqlCommand("insert into insumo values (" + id + ",'" + nombre + "','" + descripcion + "'," + idCategoria + "," + idMedida + ");", ObtenerConexion());
+                        cmd.ExecuteNonQuery();
+                        cargarInsumos();
+                        MessageBox.Show("Insumo creado");
+                        inventario();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("El insumo ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+                txtNombre.Clear();
+                txtDescripcion.Clear();
             }
         }
 
@@ -239,10 +271,17 @@ namespace Gestion.Modulo_Inventario.Formularios
 
             try
             {
-                cmd = new MySqlCommand("insert into categoria values (" + id + ",'" + nombre + "')", ObtenerConexion());
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Categoría creada");
-                actComboBox();
+                if (!yaExiste("tipoCategoria", nombre, "categoria"))
+                {
+                    cmd = new MySqlCommand("insert into categoria values (" + id + ",'" + nombre + "')", ObtenerConexion());
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Categoría creada");
+                    actComboBox();
+                }
+                else
+                {
+                    MessageBox.Show("La categoria ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -258,10 +297,17 @@ namespace Gestion.Modulo_Inventario.Formularios
 
             try
             {
-                cmd = new MySqlCommand("insert into medida values (" + id + ",'" + nombre + "')", ObtenerConexion());
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Medida creada");
-                actComboBox();
+                if (!yaExiste("tipoMedida", nombre, "medida"))
+                {
+                    cmd = new MySqlCommand("insert into medida values (" + id + ",'" + nombre + "')", ObtenerConexion());
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Medida creada");
+                    actComboBox();
+                }
+                else
+                {
+                    MessageBox.Show("La medida ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -320,15 +366,39 @@ namespace Gestion.Modulo_Inventario.Formularios
 
                 string fechaIngreso = Convert.ToString(thisDay.Year + "-" + thisDay.Month + "-" + thisDay.Day);
 
-                //MessageBox.Show(idP + ";" + fechaVencimiento + ";" + fechaIngreso);
 
                 insCompra(fechaIngreso, fechaVencimiento, cantidad, precio, idP);
+                inventario();
+
+                txtPrecioInsumo.Clear();
+                txtCantInsumo.Clear();
             }
         }
 
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string busqueda = string.Concat("[", dt.Columns[1].ColumnName, "]");
+            dt.DefaultView.Sort = busqueda;
+            DataView dv = dt.DefaultView;
+            dv.RowFilter = string.Empty;
+
+            if (txtBusqueda.Text != string.Empty)
+            {
+                dv.RowFilter = busqueda + "LIKE '%" + txtBusqueda.Text + "%'";
+                dgvInvenario.DataSource = dv;
+            }
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            dt = getInventario();
+            ds.Tables.Add(dt);
+            dgvInvenario.DataSource = dt;
         }
     }
 }

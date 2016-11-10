@@ -36,8 +36,13 @@
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.equiposYMaquinariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finanzasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+            this.finanzasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recursosHumanosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> origin/master
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,8 +61,8 @@
             this.ventasToolStripMenuItem,
             this.clienteToolStripMenuItem,
             this.inventarioToolStripMenuItem,
-            this.equiposYMaquinariaToolStripMenuItem,
-            this.finanzasToolStripMenuItem});
+            this.finanzasToolStripMenuItem,
+            this.recursosHumanosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
@@ -82,7 +87,7 @@
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ventasToolStripMenuItem.Text = "Ventas";
             this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
@@ -97,8 +102,13 @@
             // nuevoClienteToolStripMenuItem
             // 
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
+<<<<<<< HEAD
             this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.nuevoClienteToolStripMenuItem.Text = "Gestion de clientes";
+=======
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.nuevoClienteToolStripMenuItem.Text = "Nuevo cliente";
+>>>>>>> origin/master
             this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             this.nuevoClienteToolStripMenuItem.DoubleClick += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
@@ -109,12 +119,6 @@
             this.inventarioToolStripMenuItem.Text = "Inventario";
             this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
-            // equiposYMaquinariaToolStripMenuItem
-            // 
-            this.equiposYMaquinariaToolStripMenuItem.Name = "equiposYMaquinariaToolStripMenuItem";
-            this.equiposYMaquinariaToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
-            this.equiposYMaquinariaToolStripMenuItem.Text = "Equipos y Maquinaria";
-            // 
             // finanzasToolStripMenuItem
             // 
             this.finanzasToolStripMenuItem.Enabled = false;
@@ -123,6 +127,16 @@
             this.finanzasToolStripMenuItem.Text = "Finanzas";
             this.finanzasToolStripMenuItem.Click += new System.EventHandler(this.finanzasToolStripMenuItem_Click);
             // 
+<<<<<<< HEAD
+=======
+            // recursosHumanosToolStripMenuItem
+            // 
+            this.recursosHumanosToolStripMenuItem.Name = "recursosHumanosToolStripMenuItem";
+            this.recursosHumanosToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.recursosHumanosToolStripMenuItem.Text = "Recursos Humanos";
+            this.recursosHumanosToolStripMenuItem.Click += new System.EventHandler(this.recursosHumanosToolStripMenuItem_Click);
+            // 
+>>>>>>> origin/master
             // Formulario_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,11 +161,11 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem equiposYMaquinariaToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem finanzasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recursosHumanosToolStripMenuItem;
     }
 }

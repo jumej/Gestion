@@ -2,6 +2,7 @@
 using Gestion.Finanzas.Formularios;
 using Gestion.Modulo_Inventario.Formularios;
 using Gestion.Ventas.Formulario;
+using Gestion.Modulo_RRHH.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,6 +72,17 @@ namespace Gestion.Inicio.Formularios
             Formulario_Inventario inventario = new Formulario_Inventario();
             inventario.Show();
             this.Close();
+        }
+
+        private void recursosHumanosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<Formulario_Principal_RRHH>().FirstOrDefault();
+            Formulario_Principal_RRHH moduloRRHH = form ?? new Formulario_Principal_RRHH();
+            moduloRRHH.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            moduloRRHH.MaximizeBox = true;
+            moduloRRHH.Dock = DockStyle.Fill;
+            Clase_FormDentroDePanel formInPanel = new Clase_FormDentroDePanel(moduloRRHH, panelContenedor);
+            formInPanel.AgregarFormEnPanel();
         }
     }
 }
